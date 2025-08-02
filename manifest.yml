@@ -1,0 +1,17 @@
+modules:
+  jira:issuePanel:
+    - key: speech-issue-panel
+      function: main
+      title: Speech Input
+      displayConditions:
+        issueType: [bug, task]
+  function:
+    - key: main
+      handler: index.run
+
+app:
+  id: ari:cloud:ecosystem::app/267253aa-26d2-4112-ab43-9e50a1c81ab3  # or omit this on first deploy
+  name: jira-speech-input-plugin
+  runtime: nodejs18
+
+
